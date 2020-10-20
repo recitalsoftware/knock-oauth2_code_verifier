@@ -69,6 +69,8 @@ class AuthTokenController < Knock::Oauth2CodeVerifier::AuthTokenController
 
     # Your code to create and login user here
     # e.g. user = User.find_or_create_by!(user_info[:email])
+    # Only requirement is that you set the @entity variable to your user object
+    # so that Knock can use that correct when generating the auth_token
 
     # Then return a JWT payload; auth_token provided by Knock
     render json: { token: auth_token }, status: :created
