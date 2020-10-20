@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Brendan Mulholland"]
   spec.email         = ["brendan@recital.software"]
 
-  spec.summary       = "Backend provider of code verification for Oauth2\
+  spec.summary       = "Backend provider of code verification for OAuth2\
 Authorization Code Request"
-  spec.description   = "Frontend libraries implement Oauth2 flows that \
+  spec.description   = "Frontend libraries implement OAuth2 flows that \
 authenticate the user with your SPA, but are only part of the picture. If you're\
 storing user data on a backend, you'll need to authenticate them on both the\
 frontend and the backend. That's what Oauth2 Authorization Code Request does,\
