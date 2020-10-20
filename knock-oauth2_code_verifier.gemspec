@@ -13,14 +13,14 @@ Gem::Specification.new do |spec|
   spec.summary       = "Backend provider of code verification for OAuth2\
 Authorization Code Request"
   spec.description   = "Frontend libraries implement OAuth2 flows that \
-authenticate the user with your SPA, but are only part of the picture. If you're\
-storing user data on a backend, you'll need to authenticate them on both the\
-frontend and the backend. That's what Oauth2 Authorization Code Request does,\
-with PKCE thrown in for added security. This gem provides the backend\
-authorization needed, taking in a verification request and logging the user in\
-via JWT with Knock. If you're using Vue/React/etc with a frontend authorization\
-library like @nuxt/auth, and you're running Rails in API mode for your backend,\
-this gem completes the picture."
+authenticate the user with your SPA, but are only part of the picture. If \
+you're storing user data on a backend, you'll need to authenticate them on \
+both the frontend and the backend. That's what Oauth2 Authorization Code \
+Request does, with PKCE thrown in for added security. This gem provides the \
+backend authorization needed, taking in a verification request and logging the \
+user in via JWT with Knock. If you're using Vue/React/etc with a frontend \
+authorization library like @nuxt/auth, and you're running Rails in API mode for \
+your backend, this gem completes the picture."
   spec.homepage      = "https://github.com/recitalsoftware/knock-oauth2_code_verifier"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
