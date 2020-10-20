@@ -1,0 +1,43 @@
+AllCops:
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 80
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false
+
+# Rails' autoloading will load modules so that there's no namespacing issue
+# when using compact style
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# Having a comma at the end of a list of multi-line aruments avoids extra diffs
+# on otherwise-untouched lines of code when adding a new item to the end
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+# https://anti-pattern.com/always-use-double-quoted-strings-in-ruby
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Defaults to 'e', which is an uncomminicative name by reek's rules
+# See some discussion here: https://github.com/rubocop-hq/rubocop/pull/6460
+Naming/RescuedExceptionsVariableName:
+  PreferredName: error
