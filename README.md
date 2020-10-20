@@ -15,6 +15,10 @@ Suggestions for improvement, bugs, and PRs are very welcomed.
 
 [knock](https://github.com/nsarno/knock) for JWT authentication 
 
+I'd be happy to split this into an independent gem if you want to use it for
+another auth library; file an issue with that request if you want (matching
+PR preferred, of course).
+
 **Note: if you're using Rails 6, you may have to use the master branch:**
 
 ```ruby
@@ -24,10 +28,6 @@ Suggestions for improvement, bugs, and PRs are very welcomed.
 gem "knock", github: "nsarno/knock", branch: "master",
              ref: "9214cd027422df8dc31eb67c60032fbbf8fc100b"
 ```
-
-I'd be happy to split this into an independent gem if you want to use it for
-another auth library; file an issue with that request if you want (matching
-PR preferred, of course).
 
 ## Installation
 
