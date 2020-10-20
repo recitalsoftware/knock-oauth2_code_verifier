@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "oauth2"
+
 module Knock
   module Oauth2CodeVerifier
     class AuthTokenController < Knock::AuthTokenController

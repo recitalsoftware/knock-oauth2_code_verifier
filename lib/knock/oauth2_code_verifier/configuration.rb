@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+
+
 module Knock
   module Oauth2CodeVerifier
     class Configuration
@@ -25,7 +27,7 @@ module Knock
       end
 
       def for_provider(provider)
-        @providers[provider.to_sym]
+        OpenStruct.new(@providers[provider.to_sym])
       end
     end
   end

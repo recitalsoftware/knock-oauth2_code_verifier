@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "lib/knock/oauth2_code_verifier/version"
+$:.push File.expand_path("lib", __dir__)
+
+require "knock/oauth2_code_verifier/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "knock-oauth2_code_verifier"

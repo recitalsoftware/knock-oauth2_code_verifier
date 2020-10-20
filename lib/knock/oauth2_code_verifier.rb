@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require "knock/oauth2_code_verifier/version"
 require "knock/oauth2_code_verifier/configuration"
+require "knock/oauth2_code_verifier/engine"
+require "knock/oauth2_code_verifier/version"
 
 module Knock
   module Oauth2CodeVerifier
