@@ -69,11 +69,14 @@ class AuthTokenController < Knock::Oauth2CodeVerifier::AuthTokenController
 
     # Your code to create and login user here
     # e.g. user = User.find_or_create_by!(user_info[:email])
+
     # Only requirement is that you set the @entity variable to your user object
     # so that Knock can use that correct when generating the auth_token
+    # e.g. @entity = user    
 
     # Then return a JWT payload; auth_token provided by Knock
-    render json: { token: auth_token }, status: :created
+    # This returns { jwt: "token" }
+    render json: auth_token, status: :created
   end
 end
 ```
@@ -109,8 +112,9 @@ end
 ```
 
 Then you can set your client library to forward code challenges to POST
-`/auth_token/:provider`, e.g. `/auth_token/microsoft365`. For @nuxt/auth, that
-looks like:
+`/auth_token/:provider`, e.g. `/auth_token/microsoft365`, and receive the token
+back as the `jwt` attribute of the response JSON. For @nuxt/auth, that looks
+like:
 
 ```javascript
 # nuxt.config.js
@@ -120,6 +124,9 @@ export default {
       google: {
         endpoints: {
           token: 'http://localhost:4000/auth_token/google'
+        },
+        token: {
+          property: 'jwt'
         }
       }
     }
