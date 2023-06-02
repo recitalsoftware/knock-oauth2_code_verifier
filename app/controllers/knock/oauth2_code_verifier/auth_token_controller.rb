@@ -56,7 +56,7 @@ module Knock
         @user_info = {
           auth_provider: params[:provider],
           name: info["name"] || info["displayName"],
-          email: info["email"] || info["mail"],
+          email: info["email"] || info["mail"] || info["userPrincipalName"],
           refresh_token: refresh_token,
           raw_info: info,
         }
